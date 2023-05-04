@@ -1,5 +1,5 @@
 import { BrowserRouter, useRoutes } from "react-router-dom";
-import Navbar from "../../conponents/Navbar";
+import Navbar from "../../components/Navbar";
 import Home from "../Home";
 import MyAccount from "../MyAccount";
 import MyOrder from "../MyOrder";
@@ -18,8 +18,8 @@ const AppRoutes = () => {
     { path: "/*", element: <NotFound /> },
   ]);
 
-  return routes
-}
+  return routes;
+};
 
 const App = () => {
   return (
@@ -28,6 +28,6 @@ const App = () => {
       <Navbar />
     </BrowserRouter>
   );
-}
+};
 
 export default App;
