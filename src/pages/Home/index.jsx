@@ -4,7 +4,7 @@ import Card from "../../components/Card";
 import Layout from "../../components/Layout";
 import Productdetail from "../../components/ProductDetail";
 
-function Home(data) {
+function Home() {
   const [items, setItems] = useState(null);
 
 
@@ -21,7 +21,7 @@ function Home(data) {
       <section className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
       {
         items?.map((item) => (
-          <Card key={data.id} data={item} />
+          <Card key={item.id} data={item} />
         ))
       }
       </section>
