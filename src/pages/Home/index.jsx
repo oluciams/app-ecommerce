@@ -5,7 +5,7 @@ import Layout from "../../components/Layout";
 import Productdetail from "../../components/ProductDetail";
 
 function Home(data) {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(null);
 
 
   useEffect(() => {
