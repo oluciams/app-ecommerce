@@ -5,8 +5,66 @@ import { ShoppingCartContext } from "../../context";
 
 const Navbar = () => {
 
-  const context = useContext(ShoppingCartContext);
-  let activeStyle = "underline underline-offset-4";
+  const context = useContext(ShoppingCartContext)
+  let activeStyle = "underline underline-offset-4"
+
+  //Sign Out
+  const signOut = localStorage.getItem("sign-out")
+  const parsedSignOut = JSON.parse(signOut)
+  const isUserSignOut = context.signOut || parsedSignOut
+
+  const handleSignOut = () => {
+    const stringifiedSignOut = JSON.stringify(true)
+    localStorage.setItem("sign-out", stringifiedSignOut)
+    context.signOut(true)
+  }
+
+  const renderView = () => {
+    if (isUserSignOut) {
+      return (
+        <li>
+          <NavLink
+            to="/sign-in"
+            className={({ isActive }) => (isActive ? activeStyle : undefined)}
+            onClick={() => handleSignOut()}
+          >
+            Sing out
+          </NavLink>
+        </li>
+      )
+    } else {
+      return (
+        <>
+          <li className="text-black/60">usuario@email.com</li>
+          <li>
+            <NavLink
+              to="/my-orders"
+              className={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              My Orders
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/my-account"
+              className={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              My Account
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/sign-in"
+              className={({ isActive }) => (isActive ? activeStyle : undefined)}
+              onClick={() => handleSignOut()}
+            >
+              Sing out
+            </NavLink>
+          </li>
+        </>
+      )
+    }
+  }
 
   return (
     <nav className="flex justify-between items-center fixed top-0 z-10 w-full py-5 px-8 text-sm font-ligth bg-white shadow-md">
@@ -69,7 +127,8 @@ const Navbar = () => {
         </li>
       </ul>
       <ul className="flex items-center gap-3">
-        <li className="text-black/60">olucia@gmail.com</li>
+        {renderView()}
+        {/* <li className="text-black/60">usuario@email.com</li>
         <li>
           <NavLink
             to="/my-orders"
@@ -90,10 +149,11 @@ const Navbar = () => {
           <NavLink
             to="/sing-in"
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
+            onClick={() => handleSignOut()}
           >
             Sing In
           </NavLink>
-        </li>
+        </li> */}
         <li className="flex">
           <ShoppingCartIcon className="h-6 w-6" />
           <div>{context.cartProducts.length}</div>
