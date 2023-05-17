@@ -42,11 +42,11 @@ function SignIn() {
     return (
       <div className="flex flex-col w-80">
         <p>
-          <span className="font-light tex-sm">Email:</span>
+          <span className="font-light tex-sm">Email: </span>
           <span>{parsedAccount?.email}</span>
         </p>
         <p>
-          <span className="font-light tex-sm">Password:</span>
+          <span className="font-light tex-sm">Password: </span>
           <span>{parsedAccount?.password}</span>
         </p>
         <Link to={"/"}>
