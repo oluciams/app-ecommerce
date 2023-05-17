@@ -1,9 +1,9 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
-import { XMarkIcon } from "@heroicons/react/24/solid";
-import { ShoppingCartContext } from "../../context";
-import OrderCard from "../OrderCard";
-import { totalPrice } from "../../utils";
+import { useContext } from "react"
+import { Link } from "react-router-dom"
+import { XMarkIcon } from "@heroicons/react/24/solid"
+import { ShoppingCartContext } from "../../context"
+import OrderCard from "../OrderCard"
+import { totalPrice } from "../../utils"
 import "./styles.css";
 
 
@@ -74,4 +74,4 @@ const CheckoutSideMenu = () => {
   );
 };
 
-export default CheckoutSideMenu;
+export default CheckoutSideMenu

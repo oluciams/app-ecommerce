@@ -1,15 +1,15 @@
-import { useContext } from "react";
-import { BrowserRouter, Navigate, useRoutes } from "react-router-dom";
-import { initializeLocalStorage, ShoppingCartContext, ShoppingCartProvider } from "../../context";
-import Navbar from "../../components/Navbar";
-import Home from "../Home";
-import MyAccount from "../MyAccount";
-import MyOrder from "../MyOrder";
-import MyOrders from "../MyOrders";
-import NotFound from "../NotFound";
-import Signin from "../SignIn";
-import CheckoutSideMenu from "../../components/CheckoutSideMenu";
-import "./App.css";
+import { useContext } from "react"
+import { BrowserRouter, Navigate, useRoutes } from "react-router-dom"
+import { initializeLocalStorage, ShoppingCartContext, ShoppingCartProvider } from "../../context"
+import Navbar from "../../components/Navbar"
+import Home from "../Home"
+import MyAccount from "../MyAccount"
+import MyOrder from "../MyOrder"
+import MyOrders from "../MyOrders"
+import NotFound from "../NotFound"
+import Signin from "../SignIn"
+import CheckoutSideMenu from "../../components/CheckoutSideMenu"
+import "./App.css"
 
 
 const AppRoutes = () => {
@@ -58,10 +58,10 @@ const AppRoutes = () => {
     { path: "/my-orders/:id", element: <MyOrder /> },
     { path: "/sign-in", element: <Signin /> },
     { path: "/*", element: <NotFound /> },
-  ]);
+  ])
 
-  return routes;
-};
+  return routes
+}
 
 const App = () => {
   initializeLocalStorage()
@@ -77,4 +77,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App

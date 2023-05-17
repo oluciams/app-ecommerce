@@ -15,6 +15,7 @@ The following are some of the features of this project:
 - Routing with React Router DOM
 - Styles with Tailwind CSS
 - API Platzi Fafe Store
+- save user data to Local Storage
 
 ## Learning Outcomes
 

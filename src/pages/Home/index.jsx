@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { ShoppingCartContext } from "../../context";
-import Card from "../../components/Card";
-import Layout from "../../components/Layout";
-import Productdetail from "../../components/ProductDetail";
+import { useContext } from "react"
+import { ShoppingCartContext } from "../../context"
+import Card from "../../components/Card"
+import Layout from "../../components/Layout"
+import Productdetail from "../../components/ProductDetail"
 
 function Home() {
   const context = useContext(ShoppingCartContext)
@@ -39,7 +39,7 @@ function Home() {
       </section>
       <Productdetail />
     </Layout>
-  );
+  )
 }
 
-export default Home;
+export default Home

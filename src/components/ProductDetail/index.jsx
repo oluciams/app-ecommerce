@@ -1,10 +1,10 @@
-import { useContext } from "react";
-import { XMarkIcon } from "@heroicons/react/24/solid";
-import { ShoppingCartContext } from "../../context";
+import { useContext } from "react"
+import { XMarkIcon } from "@heroicons/react/24/solid"
+import { ShoppingCartContext } from "../../context"
 
 const Productdetail = () => {
 
-  const context = useContext(ShoppingCartContext);
+  const context = useContext(ShoppingCartContext)
 
   return (
     <aside
@@ -40,7 +40,7 @@ const Productdetail = () => {
         </span>
       </p>
     </aside>
-  );
-};
+  )
+}
 
-export default Productdetail;
+export default Productdetail

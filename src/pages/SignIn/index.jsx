@@ -1,7 +1,7 @@
-import { useContext, useRef, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
-import { ShoppingCartContext } from "../../context";
-import Layout from "../../components/Layout";
+import { useContext, useRef, useState } from "react"
+import { Link, Navigate } from "react-router-dom"
+import { ShoppingCartContext } from "../../context"
+import Layout from "../../components/Layout"
 
 function SignIn() {
   const context = useContext(ShoppingCartContext)
@@ -130,7 +130,7 @@ function SignIn() {
         </button>
         </Link>
       </form>
-    );
+    )
   }
 
   const renderView = () => view === "create-user-info" ? renderCreateUserInfo() : renderLogIn()
@@ -143,4 +143,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default SignIn

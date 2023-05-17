@@ -95,13 +95,10 @@ function MyAccount() {
           Edit
         </button>
       </form>
-    );
-  };
+    )
+  }
 
-  
   const renderView = () => view === "edit-user-info" ? renderEditUserInfo() : renderUserInfo()
-
-  
 
 return (
   <Layout>
@@ -111,4 +108,4 @@ return (
   )
 }
 
-export default MyAccount;
+export default MyAccount

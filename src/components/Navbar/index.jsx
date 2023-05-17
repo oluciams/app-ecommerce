@@ -1,7 +1,7 @@
-import { useContext } from "react";
-import { NavLink } from "react-router-dom";
-import { ShoppingCartContext } from "../../context";
-import ShoppingCart from "../ShoppingCart";
+import { useContext } from "react"
+import { NavLink } from "react-router-dom"
+import { ShoppingCartContext } from "../../context"
+import ShoppingCart from "../ShoppingCart"
 
 const Navbar = () => {
   const context = useContext(ShoppingCartContext)
@@ -21,9 +21,9 @@ const Navbar = () => {
   const hasUserAnAccount = !noAccountInLocalStorage || !noAccountInLocalState;
 
   const handleSignOut = () => {
-    const stringifiedSignOut = JSON.stringify(true);
-    localStorage.setItem("sign-out", stringifiedSignOut);
-    context.signOut(true);
+    const stringifiedSignOut = JSON.stringify(true)
+    localStorage.setItem("sign-out", stringifiedSignOut)
+    context.signOut(true)
   };
 
   const renderView = () => {
@@ -145,4 +145,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar;
+export default Navbar

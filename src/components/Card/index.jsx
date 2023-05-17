@@ -1,6 +1,6 @@
-import { useContext } from "react";
-import { PlusIcon, CheckIcon } from "@heroicons/react/24/solid";
-import { ShoppingCartContext } from "../../context";
+import { useContext } from "react"
+import { PlusIcon, CheckIcon } from "@heroicons/react/24/solid"
+import { ShoppingCartContext } from "../../context"
 
 
 const Card = (data) => {
@@ -8,7 +8,7 @@ const Card = (data) => {
   const context = useContext(ShoppingCartContext)
 
   const showProduct = (productDetail) => {
-    context.openProductDetail();
+    context.openProductDetail()
     context.setProductToShow(productDetail)
   }
 
@@ -17,7 +17,7 @@ const Card = (data) => {
     context.setCount(context.count + 1)
     context.setCartProducts([...context.cartProducts, productData])
     context.openCheckoutSideMenu()
-    context.closeProductDetail();
+    context.closeProductDetail()
   }
 
   const renderIcon = (id) => {
@@ -38,7 +38,7 @@ const Card = (data) => {
         >
           <PlusIcon className="h-6 w-6 text-black" />
         </div>
-      );
+      )
     }
   }
 
@@ -65,7 +65,7 @@ const Card = (data) => {
         <span className="text-lg font-medium">${data.data.price}</span>
       </p>
     </section>
-  );
+  )
 }
 
 export default Card

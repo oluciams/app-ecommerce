@@ -1,12 +1,12 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
-import { ChevronLeftIcon } from "@heroicons/react/24/solid";
-import { ShoppingCartContext } from "../../context";
-import Layout from "../../components/Layout";
-import OrderCard from "../../components/OrderCard";
+import { useContext } from "react"
+import { Link } from "react-router-dom"
+import { ChevronLeftIcon } from "@heroicons/react/24/solid"
+import { ShoppingCartContext } from "../../context"
+import Layout from "../../components/Layout"
+import OrderCard from "../../components/OrderCard"
 
 function MyOrder() {
-  const context = useContext(ShoppingCartContext);
+  const context = useContext(ShoppingCartContext)
 
   const currentPath = window.location.pathname
   let index = currentPath.substring(currentPath.lastIndexOf("/") + 1)
@@ -34,7 +34,7 @@ function MyOrder() {
         }
       </div>
     </Layout>
-  );
+  )
 }
 
-export default MyOrder;
+export default MyOrder

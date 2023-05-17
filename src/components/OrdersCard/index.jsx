@@ -1,9 +1,8 @@
-import { ChevronRightIcon } from "@heroicons/react/24/solid";
-
-import PropTypes from "prop-types";
+import { ChevronRightIcon } from "@heroicons/react/24/solid"
+import PropTypes from "prop-types"
 
 const OrdersCard = (props) => {
-  const { totalPrice, totalProducts } = props;
+  const { totalPrice, totalProducts } = props
 
   return (
     <div className="flex justify-between item-center mb-4 border border-black rounded-lg p-4 w-80">

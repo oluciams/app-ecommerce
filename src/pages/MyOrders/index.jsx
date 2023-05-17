@@ -1,11 +1,11 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
-import { ShoppingCartContext } from "../../context";
-import Layout from "../../components/Layout";
-import OrdersCard  from "../../components/OrdersCard";
+import { useContext } from "react"
+import { Link } from "react-router-dom"
+import { ShoppingCartContext } from "../../context"
+import Layout from "../../components/Layout"
+import OrdersCard  from "../../components/OrdersCard"
 
 function MyOrders() {
-  const context = useContext(ShoppingCartContext);
+  const context = useContext(ShoppingCartContext)
 
   return (
     <Layout>
@@ -23,7 +23,7 @@ function MyOrders() {
         ))
       }
     </Layout>
-  );
+  )
 }
 
-export default MyOrders;
+export default MyOrders
