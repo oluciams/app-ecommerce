@@ -128,32 +128,6 @@ const Navbar = () => {
       </ul>
       <ul className="flex items-center gap-3">
         {renderView()}
-        {/* <li className="text-black/60">usuario@email.com</li>
-        <li>
-          <NavLink
-            to="/my-orders"
-            className={({ isActive }) => (isActive ? activeStyle : undefined)}
-          >
-            My Orders
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/my-account"
-            className={({ isActive }) => (isActive ? activeStyle : undefined)}
-          >
-            My Account
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/sing-in"
-            className={({ isActive }) => (isActive ? activeStyle : undefined)}
-            onClick={() => handleSignOut()}
-          >
-            Sing In
-          </NavLink>
-        </li> */}
         <li className="flex">
           <ShoppingCartIcon className="h-6 w-6" />
           <div>{context.cartProducts.length}</div>
