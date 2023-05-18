@@ -66,7 +66,7 @@ const Navbar = () => {
             className={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => handleSignOut()}
           >
-            Sing out
+            Sing in
           </NavLink>
         </li>
       )
